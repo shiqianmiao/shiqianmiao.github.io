@@ -6,10 +6,10 @@ pygments: true
 paginate: 5
 markdown: kramdown
 
-title : (╯‵□′)╯︵┻━┻
+title : 
 tagline: 热爱技术,热爱开源
 author :
-  name : shiqianmiao 
+  name : Shiqian Miao 
   description: JavaScript & PHP Developer
   email : 1205924828@qq.com
   github : https://github.com/shiqianmiao

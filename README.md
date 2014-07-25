@@ -1,7 +1,6 @@
 ## kandamashiro的博客
 
-基于jekyll的个人博客[http://kandamashiro.github.io/](http://kandamashiro.github.io/)
-在此感谢[stormzhang](https://github.com/stormzhang)提供博客的模板。
+基于jekyll的个人博客[http://shiqianmiao.github.io/](http://kandamashiro.github.io/)
 
 ## 关于我
 
