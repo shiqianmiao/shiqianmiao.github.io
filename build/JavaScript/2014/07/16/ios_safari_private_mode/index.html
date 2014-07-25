@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IOS下使用Storage时的一个坑</title>
+    
+    
+    <meta name="author" content="shiqianmiao">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/typo.css" rel="stylesheet">
+    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/solarized.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/datatables-bootstrap.css" rel="stylesheet">
+    <link href="/css/codepiano.css" rel="stylesheet">
+
+    <!-- javascript files -->
+    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/datatables-bootstrap.js"></script>
+    <script type="text/javascript" src="/js/codepiano.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <script type="text/javascript">
+    </script>
+
+  </head>
+
+  <body id="scroll-pane" data-spy="scroll" data-target="#time-list-nav">
+    <div class="wrapper">
+      <!-- 导航条 -->
+      <div class="navbar">
+        <div class="navbar-inner row-fluid">
+          <div class="span2">
+          </div>
+          <div class="span8">
+            <a class="brand" href="/">
+              <span class="site-author"> shiqianmiao </span>
+              <span class="site-title"> (╯‵□′)╯︵┻━┻ </span>
+            </a>
+            <ul class="nav">
+              
+              
+              
+
+
+
+
+
+<li class="posts"><a href="/posts.html">文章</a></li>
+<li class="timeline"><a href="/timeline.html">时间轴</a></li>
+<li class="categories"><a href="/categories.html">分类</a></li>
+<li class="about"><a href="/about.html">关于</a></li>
+
+            </ul>
+          </div>
+          <div class="span2">
+          </div>
+        </div>
+      </div>
+
+      <!-- 正文 -->
+      
+
+<div class="row-fluid post-full typo">
+  <div class="span2"></div>
+  <div class="span8 typo">
+    <h2>IOS下使用Storage时的一个坑 </h2>
+    <div class="post_info">
+      
+      <ul class="tag_box inline">
+        <li><i class="icon-calendar"></i></li>
+        <li> 2014 年 07 月 16 日</li>
+        <li><i class="icon-folder-open"></i></li>
+        
+        
+ 
+  <li>
+    <a href="/categories.html#JavaScript-ref">
+      JavaScript 
+    </a>
+  </li>
+  
+
+
+
+      </ul>
+        
+    </div>
+    <div class="content">
+      
+<p>昨天同事告诉我公司的M站在 IPhone 手机上的Javascript全部都无法执行，让我帮忙看看出了什么问题。<br />
+听到在IPhone上出问题也是见怪不怪了，把手机连接上电脑调试了下发现报了如下错误：</p>
+
+<pre><code>QuotaExceededError: Dom exception 22: An attempt was made to add something to storage that exceeded the quota
+</code></pre>
+
+<p>意思是Storage超出了配额，我只想说，你是在开玩笑嘛，公司的M站只在storage初始化的时候添加了一条key/value而已啊。<br />
+我的直觉告诉我这肯定又是IPhone上坑爹的设计（bug）中的一个，果不其然，我在stackoverflow上找到了这么一个回答：
+<a href="http://stackoverflow.com/questions/21159301/quotaexceedederror-dom-exception-22-an-attempt-was-made-to-add-something-to-st">stackoverflow</a>。</p>
+
+<p>原来Safari在所谓的private mode下不允许使用Storage功能，只有在用户自身开启non-private mode的情况下才可以正常使用Storage。<br />
+所谓的non-private mode就是中文safari下的无痕模式，敢问正常的用户有几个人会去开启这个模式？
+既然不让人使用就不要把Storage开放出来啊。。。囧死个人，没办法只好我们自己去判断Storage功能是否可用了。<br />
+正常情况下我们会这么判断Storage是否可用：</p>
+
+<pre><code>if ( !window.localStorage ) {
+    //ie6，ie7 使用UserData替代实现
+    //...
+} else {
+    //使用storage
+}
+</code></pre>
+
+<p>可惜的是这种判断方法在safari上不适用，localStroage，sessionStroage和Storage在safari上都是存在的，只是不让使用而已（就不让你用，来打我啊~O(∩_∩)O哈哈~）
+不过因为在使用的时候会报QuotaExceedError，利用这一点我们可以通过try/catch来判断。代码如下：</p>
+
+<pre><code>if ( !window.localStorage ) {
+    //ie6，ie7 使用UserData替代实现
+    //...
+} else {
+    //判断是否Storage是否真的可用
+    var localStorage = window.localStorage;
+    var test = 'test';
+        try {
+            storage.setItem(test, '1');
+            storage.removeItem(test);
+            //使用Storage
+        } catch (e) {
+            //使用cookie替代实现
+        }
+}
+</code></pre>
+
+<p>这里就不把全部代码写下来了，因为大家的Storage封装可能都不太一样。</p>
+
+<p>不得不说不管是在开发Wap还是Web App，IPhone上的坑都是多的惊人，明明在android上能完美运行的代码在IPhone上就是出各种莫名其妙问题，果然我是没办法喜欢上IPhone啊。  </p>
+
+<p>PS:关于Web App开发能使用的UI框架，最近百度的团队正要开源一个Web App的框架blend UI，在演示现场运行的时候确实有着不错的效果。<br />
+经常要做Web App的人可以关注一下blend UI的开源进度，相信肯定会对提高大家在开发Web App时的效率上有一定的帮助。</p>
+
+
+    </div>
+
+    
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+   
+    <li><a href="/posts.html#Javascript">Javascript <span>2</span></a></li>
+  
+
+
+
+    </ul>
+      
+
+    <hr>
+    <div class="pagination pull-right">
+      <ul>
+        
+        <li class="prev"><a href="/CSS/2014/07/14/juzhong" title="CSS水平垂直居中的几种方式和适用情况">&larr; 上一篇</a></li>
+        
+        <li><a href="/posts.html">全部</a></li>
+        
+        <li class="next"><a href="/HTML/2014/07/18/web_components" title="Web Components -- Web组件标准化的未来">下一篇 &rarr;</a></li>
+        
+      </ul>
+    </div>
+    <br />
+    <div id="comment-hook"></div>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'shiqianmiao'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementById('comment-hook') || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+  </div>
+  <div class="span2"></div>
+</div>
+
+
+      
+    
+
+  </body>
+</html>
+

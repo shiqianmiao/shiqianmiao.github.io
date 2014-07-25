@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Shiqian Miao's Blog</title>
+    
+    
+    <meta name="author" content="shiqianmiao">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/typo.css" rel="stylesheet">
+    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/solarized.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/datatables-bootstrap.css" rel="stylesheet">
+    <link href="/css/codepiano.css" rel="stylesheet">
+
+    <!-- javascript files -->
+    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/datatables-bootstrap.js"></script>
+    <script type="text/javascript" src="/js/codepiano.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <script type="text/javascript">
+    </script>
+
+  </head>
+
+  <body id="scroll-pane" data-spy="scroll" data-target="#time-list-nav">
+    <div class="wrapper">
+      <!-- 导航条 -->
+      <div class="navbar">
+        <div class="navbar-inner row-fluid">
+          <div class="span2">
+          </div>
+          <div class="span8">
+            <a class="brand" href="/">
+              <span class="site-author"> shiqianmiao </span>
+              <span class="site-title"> (╯‵□′)╯︵┻━┻ </span>
+            </a>
+            <ul class="nav">
+              
+              
+              
+
+
+
+
+
+<li class="posts"><a href="/posts.html">文章</a></li>
+<li class="timeline"><a href="/timeline.html">时间轴</a></li>
+<li class="categories"><a href="/categories.html">分类</a></li>
+<li class="about"><a href="/about.html">关于</a></li>
+
+            </ul>
+          </div>
+          <div class="span2">
+          </div>
+        </div>
+      </div>
+
+      <!-- 正文 -->
+      
+
+<div class="row-fluid typo">
+  <div class="span2">
+    <ul class="nav nav-tabs nav-stacked dispear" id="support">
+      <li><a href="#" onclick="toggleSupport();return false;"><i class="icon-star-empty"></i> 技术支持</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="为 Twitter Bootstrap 设计的图标字体" href="http://fontawesome.io" target="_blank"><i class="icon-ok"></i> Font-Awesome</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="github提供的免费静态页面服务，使用git进行发布和管理" href="http://pages.github.com" target="_blank"><i class="icon-ok"></i> Github Pages</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="静态页面生成工具" href="http://jekyllrb.com" target="_blank"><i class="icon-ok"></i> Jekyll</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="博客页面模板" href="http://jekyllbootstrap.com" target="_blank"><i class="icon-ok"></i> Jekyll-Bootstrap</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="Javascript框架" href="http://jquery.com" target="_blank"><i class="icon-ok"></i> JQuery</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="基于JQuery的表格插件" href="http://www.datatables.net/" target="_blank"><i class="icon-ok"></i> DataTables</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="Twitter提供的前端框架" href="http://twitter.github.io/bootstrap" target="_blank"><i class="icon-ok"></i> Twitter Bootstrap</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="排版样式表" href="http://typo.sofish.de" target="_blank"><i class="icon-ok"></i> Typo.css</a></li>
+      <li><a data-toggle="tooltip" title data-original-title="开发工具" href="http://www.vim.org" target="_blank"><i class="icon-ok"></i> Vim</a></li>
+    </ul>
+  </div>
+  <div class="span8">
+    
+
+<!-- 按照分页插入博客文章 -->
+
+  <h2 class="title"><a href="/HTML/2014/07/18/web_components">Web Components -- Web组件标准化的未来</a></h2>
+  <div class="post_info">
+  
+  <ul class="tag_box inline">
+    <li><i class="icon-calendar"></i></li>
+    <li id="post-date"> 2014 年 07 月 18 日</li>
+    <li><i class="icon-folder-open"></i></li>
+    
+    
+ 
+  <li>
+    <a href="/categories.html#HTML-ref">
+      HTML 
+    </a>
+  </li>
+  
+
+
+
+  </ul>
+    
+  <span> 
+  </div>
+  <div class="archive">
+    
+<p>7月17日google发布了Chrome 36正式版，这个版本正式支持了HTML imports，这意味着Web Components的全面实现已经不再是遥远的未来了。<br />
+身为一个Web开发者怎么不來体验一下这些面向未来的组件标准呢？果断升级了Chrome 36，抢先体验一把。</p>
+
+<p>如果还不是很了解什么是Web Components的话，可以看看<a href="http://www.w3.org/TR/components-intro/">components-introduction</a>。</p>
+
+<h3 id="templates">Templates</h3>
+<p>Chrome 26开始支持template标签，这个标签可以看做是客户端的模板，我们在服务器端和客户端的模板引擎层出不穷，想必大家也都用过不少了，两边各有特点。</p>
+
+<h4 id="section">服务器端模板引擎</h4>
+<p>在服务器端将模板和数据合成，返回最终的HTML页面  </p>
+
+<h5 id="section-1">优点</h5>
+<ol>
+  <li>渲染过程不执行JavaScript脚本？</li>
+  <li>SEO友好</li>
+</ol>
+
+<h5 id="section-2">缺点</h5>
+<ol>
+  <li>客户端模板的优点就是它的缺点</li>
+</ol>
+
+<h4 id="section-3">客户端模板引擎</h4>
+<p>将模板和数据分别传送到客户端，在客户端由JavaScript模板引擎渲染出最终的HTML视图。  </p>
+
+<h5 id="section-4">优点</h5>
+<ol>
+  <li>可以将静态的模板文件进行缓存和负载均衡，对于流量大的网站很有价值。</li>
+  <li>模板渲染过程转移到客户端，减轻服务器的负荷。</li>
+  <li>可复用性高。一个页面的前端内容可能来自不同后台，用了不同的架构，甚至是不同的语言。他们的模板引擎可能五花八门根本不能复用共享。<br />
+客户端不存在这个问题，不同的架构，不同的语言可以使用相同的客户端渲染引擎，从而实现模板共用，结构统一，易于修改和扩展。</li>
+  <li>从职责区分来说，模板渲染其实算是前端开发的工作。长久以来后端工程师一直苦于需要在处理数据的同时还要参与页面上的展示逻辑。
+前后端的工作一直紧紧的耦合在一起，使用客户端模板从一定程度上解决了这个问题。<br />
+后端工程师只需要专注于底层业务逻辑和数据的处理，而前端工程师也不需要再和后端工程师在HTML结构上苦苦纠结。</li>
+</ol>
+
+<h5 id="section-5">缺点</h5>
+<ol>
+  <li>SEO不友好？</li>
+</ol>
+
+<p>我们再来看看template，它不但拥有上述客户端模板引擎的所有优点，最重要的是它是Web Components的一个标准，
+这意味着未来的某一天，所有主流的浏览器都可以使用它来做模板引擎而不用下来多余的模板引擎框架文件，不需要担心找不到会使用它的人！</p>
+
+<p>上面我打上了问号（？）的地方其实算是一种讹传，他们在某些搜索引擎下（某度）的时候是成立的，但Google是可以执行Javascript脚本的，所以不存在SEO不友好的问题。
+技术都是一直向前进步的，不是吗？</p>
+
+<h4 id="section-6">正式上场之前</h4>
+
+<p>在我们正式使用前，先写个小函数来判断你的浏览器是否支持tamplate。</p>
+
+<pre><code>function supportsTemplate() {
+   return 'content' in document.createElement('template');
+}
+ 
+if (supportsTemplate()) {
+   //支持
+} else {
+   //不支持
+}
+</code></pre>
+
+<p>接下来实现一个小例子。
+<a class="jsbin-embed" href="http://jsbin.com/qiviq/4/embed?html,js,output">JS Bin</a></p>
+
+<p>&lt;template&gt;标签中的所有元素都会由解析器解析，但仅仅只是解析。中间如果有脚本，脚本不会马上执行，图片也不会下载，而&lt;template&gt;本身也不会被显示出来。<br />
+只有在把&lt;template&gt;中的元素复制插入或直接插入页面时，其中的内容才会被运行。
+在上面的例子中就是这一句。</p>
+
+<pre><code>document.body.appendChild(content.cloneNode(true));
+</code></pre>
+
+<p>可以想象他配合上 imports 可以很轻松实现按需加载js的功能，而且从也很符合逻辑，先加载对已模板需要的js再渲染模板，是不是很赞呢？</p>
+
+<script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+  </div>
+  <hr />
+  
+  <h2 class="title"><a href="/JavaScript/2014/07/16/ios_safari_private_mode">IOS下使用Storage时的一个坑</a></h2>
+  <div class="post_info">
+  
+  <ul class="tag_box inline">
+    <li><i class="icon-calendar"></i></li>
+    <li id="post-date"> 2014 年 07 月 16 日</li>
+    <li><i class="icon-folder-open"></i></li>
+    
+    
+ 
+  <li>
+    <a href="/categories.html#JavaScript-ref">
+      JavaScript 
+    </a>
+  </li>
+  
+
+
+
+  </ul>
+    
+  <span> 
+  </div>
+  <div class="archive">
+    
+<p>昨天同事告诉我公司的M站在 IPhone 手机上的Javascript全部都无法执行，让我帮忙看看出了什么问题。<br />
+听到在IPhone上出问题也是见怪不怪了，把手机连接上电脑调试了下发现报了如下错误：</p>
+
+<pre><code>QuotaExceededError: Dom exception 22: An attempt was made to add something to storage that exceeded the quota
+</code></pre>
+
+<p>意思是Storage超出了配额，我只想说，你是在开玩笑嘛，公司的M站只在storage初始化的时候添加了一条key/value而已啊。<br />
+我的直觉告诉我这肯定又是IPhone上坑爹的设计（bug）中的一个，果不其然，我在stackoverflow上找到了这么一个回答：
+<a href="http://stackoverflow.com/questions/21159301/quotaexceedederror-dom-exception-22-an-attempt-was-made-to-add-something-to-st">stackoverflow</a>。</p>
+
+<p>原来Safari在所谓的private mode下不允许使用Storage功能，只有在用户自身开启non-private mode的情况下才可以正常使用Storage。<br />
+所谓的non-private mode就是中文safari下的无痕模式，敢问正常的用户有几个人会去开启这个模式？
+既然不让人使用就不要把Storage开放出来啊。。。囧死个人，没办法只好我们自己去判断Storage功能是否可用了。<br />
+正常情况下我们会这么判断Storage是否可用：</p>
+
+<pre><code>if ( !window.localStorage ) {
+    //ie6，ie7 使用UserData替代实现
+    //...
+} else {
+    //使用storage
+}
+</code></pre>
+
+<p>可惜的是这种判断方法在safari上不适用，localStroage，sessionStroage和Storage在safari上都是存在的，只是不让使用而已（就不让你用，来打我啊~O(∩_∩)O哈哈~）
+不过因为在使用的时候会报QuotaExceedError，利用这一点我们可以通过try/catch来判断。代码如下：</p>
+
+<pre><code>if ( !window.localStorage ) {
+    //ie6，ie7 使用UserData替代实现
+    //...
+} else {
+    //判断是否Storage是否真的可用
+    var localStorage = window.localStorage;
+    var test = 'test';
+        try {
+            storage.setItem(test, '1');
+            storage.removeItem(test);
+            //使用Storage
+        } catch (e) {
+            //使用cookie替代实现
+        }
+}
+</code></pre>
+
+<p>这里就不把全部代码写下来了，因为大家的Storage封装可能都不太一样。</p>
+
+<p>不得不说不管是在开发Wap还是Web App，IPhone上的坑都是多的惊人，明明在android上能完美运行的代码在IPhone上就是出各种莫名其妙问题，果然我是没办法喜欢上IPhone啊。  </p>
+
+<p>PS:关于Web App开发能使用的UI框架，最近百度的团队正要开源一个Web App的框架blend UI，在演示现场运行的时候确实有着不错的效果。<br />
+经常要做Web App的人可以关注一下blend UI的开源进度，相信肯定会对提高大家在开发Web App时的效率上有一定的帮助。</p>
+
+
+  </div>
+  <hr />
+  
+  <h2 class="title"><a href="/CSS/2014/07/14/juzhong">CSS水平垂直居中的几种方式和适用情况</a></h2>
+  <div class="post_info">
+  
+  <ul class="tag_box inline">
+    <li><i class="icon-calendar"></i></li>
+    <li id="post-date"> 2014 年 07 月 14 日</li>
+    <li><i class="icon-folder-open"></i></li>
+    
+    
+ 
+  <li>
+    <a href="/categories.html#CSS-ref">
+      CSS 
+    </a>
+  </li>
+  
+
+
+
+  </ul>
+    
+  <span> 
+  </div>
+  <div class="archive">
+    
+<p>最近和我们公司负责切图工作的同事那边要了一些psd来学习切图。好久没有做过关于CSS方面的工作，写起来憋手蹩脚的。<br />
+最近打算研究一些CSS相关的东西来练练手，免得到要用的时候才发现自己已经忘得差不多了。</p>
+
+<p>在制作Web页面时大家或多或少都有碰到CSS制作水平垂直居中的问题，特别的其中的垂直居中，更是让人烦恼。<br />
+用CSS来实现元素的垂直居中效果是件苦差事，这里我总结了一下几种不同实现的方法和他们的优缺点和适用场景。  </p>
+
+<h3 id="section">垂直居中</h3>
+
+<h4 id="section-1">方法一：</h4>
+<p>这种方法适合只有单行内容的情况。只要<strong>保证元素内容是单行。并且高度是不变的。将height和line-height的值设置成一样</strong>就可以了。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/pusib/1/embed">JS Bin</a></p>
+
+<h5 id="section-2">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作，没有足够空间时，内容不会被切掉（没有足够空间就不属于单行了）。</li>
+  <li>对运用在小元素上是非常有用，比如说让图片或者单行文本字段垂直居中。</li>
+</ol>
+
+<h5 id="section-3">优点</h5>
+<ol>
+  <li>实现简单。</li>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-4">缺点</h5>
+<p>只能在单行时适用，多行时效果很差。</p>
+
+<h3 id="section-5">方法二：</h3>
+<p>这种方法要实现垂直居中首先要满足有一个<strong>固定的高度</strong>，并且<strong>父容器需要设置相对定位</strong>（position: relative）。<br />
+给需要垂直居中的容器设置<strong>绝对定位</strong>（position:absolute,并且<strong>定位高度</strong>（top:50%）和<strong>margin-top为负的高度的一半</strong>（margin-top:-height/2）。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/dapaz/11/embed">JS Bin</a></p>
+
+<h5 id="section-6">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-7">优点</h5>
+<ol>
+  <li>不需增加额外的标签。</li>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-8">缺点</h5>
+<ol>
+  <li>只能支持固定高度的情况。</li>
+  <li>需要父标签配合设置相对定位。</li>
+  <li>固定高度导致内容溢出时会出现滚动条或隐藏，不会配合内容高度变化。</li>
+</ol>
+
+<h3 id="section-9">方法三：</h3>
+<p>这种方法是通过让div去模拟表格的效果，从而通过<strong>使用table-cell的vertical-align属性</strong>来实现垂直居中。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/jagak/5/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-10">适用场景</h5>
+<ol>
+  <li>不兼容ie6，ie7</li>
+</ol>
+
+<h5 id="section-11">优点</h5>
+<ol>
+  <li>可以自适应高度，不会出现滚动条。</li>
+  <li>高度不足不会被切断。</li>
+</ol>
+
+<h5 id="section-12">缺点</h5>
+<ol>
+  <li>兼容问题，不兼容ie6，ie7。display: table 在ie6，ie7下无效（不能强行装table了，好忧伤）</li>
+</ol>
+
+<script src="http://static.jsbin.com/js/embed.js"></script>
+
+<h5 id="section-13">怎么做兼容？</h5>
+<p>要兼容蛋疼的ie6，ie7，需要在原本的table-cell里面再套一层div，并且针对ie6，ie7使用hack。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/sovuyu/3/embed?html,css,output">JS Bin</a></p>
+
+<p>ie6下的效果图：<br />
+<img src="/image/juzhong/ie6-table-cell.png" alt="ie6下的效果图" /></p>
+
+<h3 id="section-14">方法四：</h3>
+<p>这种方法是通过<strong>在居中元素前放置一个空的块元素，设置块元素的高度为50%，margin-bottom为居中元素负的高度的一半，居中元素清除浮动</strong>来实现的。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/rated/5/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-15">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-16">优点</h5>
+<ol>
+  <li>在没有足够空间的情况下不会被自动切割。</li>
+  <li>比上一个模拟table实现起来更简单。</li>
+</ol>
+
+<h5 id="section-17">缺点</h5>
+<ol>
+  <li>元素高度固定。</li>
+  <li>元素溢出时只能在父元素上设置overflow属性，出现滚动条或切割。</li>
+  <li>增加了一个多余的块元素，为了保证ie6，ie7下的兼容性，div必须是有内容的块元素，这里用了&amp;nbsp;填充。</li>
+</ol>
+
+<p>ie6下的效果图：<br />
+<img src="/image/juzhong/ie6-extra-div.png" alt="ie6下的效果图" /></p>
+
+<h3 id="section-18">方法五</h3>
+<p>当我们只需要一个简单的多行文本垂直居中而且父容器的高度没有要求时，可以很简单的用<strong>设置上下相同的padding值</strong>来做到。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/qisoj/2/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-19">适用场景</h5>
+<ol>
+  <li>能再所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-20">优点</h5>
+<ol>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-21">缺点</h5>
+<ol>
+  <li>父容器不能有固定高度。</li>
+</ol>
+
+<p>上面讲了5种不同的垂直水平居中的方法，其实还有非常多的实现方法，这里就不一一总结了，我们还是在这展望一下未来我们所希望的垂直居中的方法吧。<br />
+现在所使用的垂直水平居中的方法，绝大部分都是通过各种奇妙的写法来达到效果的，我们想要的是更简单的写法。比如：</p>
+
+<pre><code>position：center;
+</code></pre>
+
+<p>希望css未来的发展能够满足大家这个迫切的需求，不用再在各种各样的垂直居中方案中纠结了。(╯‵□′)╯︵┻━┻  </p>
+
+<p>有兴趣继续了解的可以去<a href="http://www.w3cplus.com/">w3cplus</a>看看，上面有更多更加完善、碉堡的总结。  </p>
+
+  </div>
+  <hr />
+  
+  <h2 class="title"><a href="/JavaScript/2014/06/26/js_conf">6.21-6.22杭JSConf</a></h2>
+  <div class="post_info">
+  
+  <ul class="tag_box inline">
+    <li><i class="icon-calendar"></i></li>
+    <li id="post-date"> 2014 年 06 月 26 日</li>
+    <li><i class="icon-folder-open"></i></li>
+    
+    
+ 
+  <li>
+    <a href="/categories.html#JavaScript-ref">
+      JavaScript 
+    </a>
+  </li>
+  
+
+
+
+  </ul>
+    
+  <span> 
+  </div>
+  <div class="archive">
+    
+<p>最近参加了第三届JSConf中国开发者大会，这里谈谈两天下来自己的一些感受。<br />
+首先不得不说一下主办方还是很厚道的，大会的内容很紧凑，涵盖了各个方面的内容。<br />
+对于我才刚刚毕业一年时间的新人来说，确实是开了不少眼界。也再一次感受到了自己的经验还很不足。<br />
+这里谈谈一些印象比较深刻的部分，以下意见仅代表个人观点，有错的地方请大家指正。。。  </p>
+
+<h2 id="thenjs-----">Then.js 异步库的实现原理及优缺点 – 严清</h2>
+<p>大家在只写过前端JavaScript，没有真正写过Node的项目的时候，可能体会不到什么叫做callback hell。<br />
+前端JavaScript很少会出现一个callback套了很多层callback的情况。而Node由于异步I/O的存在，Node几乎所有的函数都有callback。<br />
+这就导致了Node代码入门容易，想写好却很不容易。</p>
+
+<p>第一个speaker最先分享了关于callback hell的一些解决方案和他们的优缺点</p>
+
+<h4 id="event">Event模式</h4>
+<p>使用JavaScript中最重要的模式来解嵌套，这个方案的原理是使用EventEmitter来解嵌套。<br />
+实际使用中感觉这个方案并不是很适合来解决嵌套问题(虽然可以解决)， 它更适合做它原本应该做的事 – 实现事件发布和订阅机制</p>
+
+<h4 id="promisedeferred">Promise/Deferred模式</h4>
+<p>这个模式其实绝大部分前端都使用过，最常见的例子就是JQuery中封装的$.ajax了，它允许我们先发送请求，而后再确定如何处理数据。  </p>
+
+<pre><code>var promise = $.ajax('get/something');
+//do something...
+promise.success(function() {
+    //...
+});
+</code></pre>
+
+<p>他的缺点是每个业务都要单独封装(比如ajax业务， fs业务等)</p>
+
+<h4 id="generator-thunk">Generator， Thunk等模式</h4>
+<p>这些模式还没有实际使用经验，不做评论，等有机会实践后在评论。</p>
+
+<h4 id="thenjs">then.js</h4>
+<p>现场没有听明白，下载了ppt结果发现ppt也没说明白，坑爹。先follow下有机会再试用。<br />
+据作者描述性能远超其他所有库，而且代码简短，写出来的代码风格也好。如果真是这样那还真是解决了一大难题了= =</p>
+
+<h2 id="section">淘宝前后端分离实践(中途岛) – 赫门</h2>
+<p>长久以来，MVC中的所有部分都是交给后端工程师去实现，而前端工程师负责的部分往往就是切图。<br />
+这种职责划分不得不说是欠妥的。后端不单包办了数据库交互，控制器，数据输出，甚至还去实现了大部分的前端效果。<br />
+而前端由于只负责了切图，导致时常出现html结构和实际前端效果所需要的html结构有很大的出入，出现需要返工重写结构，css的情况时有发生。  </p>
+
+<p>当然不单单只有这么些问题，后端需要将静态页面改成动态模板也导致了前后端的信息不统一。<br />
+在之后的更新改动中，前端改动的是静态页面，后端则需要去观察静态页面的改动，再把改动移到模板中，这中间可能发生的各种各样麻烦事。  </p>
+
+<p>就跟代码为什么要重构一样，前后端的关注点和职责也应该更加分离。<br />
+我们不应该从硬件环境来区分职责(browser和web server)，而应该从工作职责上来区分。<br />
+现在有了Node，前端有了接触后端业务的良好环境。<br />
+而且，更因为Node在处理I/O密集型的业务时更胜PHP/JAVA这些语言一筹，View和Controller的任务交由前端来做也是有理有据的。</p>
+
+<p>目前，淘宝首页和详情页正是采用了这种后端负责数据和业务逻辑， 前端负责路由设计，控制逻辑和浏览器端的html，css和js的设计。<br />
+并且已经有更多地项目开始实践这种职责分工， 相信他们的实践会给我们指明今后的道路。</p>
+
+<h2 id="peer-directed-collaborative-projects----james-halliday">Peer-Directed Collaborative Projects – 大神James Halliday</h2>
+<p>他的分享我觉得比起这个题目更应该说是他个人一年内所做的项目的总结，内容很多，每个项目都非常有创意，很抱歉大部分我都没太听懂。。。<br />
+唯有browserify总算是懂了一些。</p>
+
+<p>现在在浏览器前端，主要流行的模块化方案主要有两种RequireJS和seaJS。<br />
+RequireJS(定义了AMD规范)是<strong>提前执行</strong>，推崇<strong>依赖前置</strong>。<br />
+seaJS(定义了CMD规范)是<strong>延时执行</strong>，推崇<strong>依赖就近</strong>。
+这里吐槽一下我们的G。js的简介是A AMD implementation inspired by seaJS。<br />
+明明是实现了AMD规范，却表示自己灵感来自seaJS，囧。  </p>
+
+<p>这两种方式各有千秋，但是都和Node实现的CommonJS有差别，其中最明显的就是多了用define函数来包覆js文件了。<br />
+而browserify则是实现了前后端JavaScript统一规范的写法。他可以让浏览器端一样可以使用形如</p>
+
+<pre><code>var module1 = require('module1');
+</code></pre>
+
+<p>这种形式来引入模块，甚至可以把npm包和Node原生模块一起封装到前端真正做到前后端代码可以复用。<br />
+只能说大神的想法，你不服不行，别人也是真正做到了消灭前后端代码差异。browserify绝对是大会上的一个亮点。  </p>
+
+<p>目前所了解到的一个缺点是，browserify由于采用的是预编译的形式来封装代码，相比RequireJS和seaJS来说，可能在合并公共JS代码的时候会比较不方便。
+而这种all-in-one的js封装形式，因为经常要下载更新后的JS文件，在代码频繁修改的时候也会影响到用户加载速度。  </p>
+
+<p>如果browserify能推出封装公共代码的封装方式的话，肯定会更加完美。  </p>
+
+<p>ps:大神真不愧是大神，自带unix小本本，大会期间代码写的飞起，单身20多年的手速什么的。。。  </p>
+
+<h2 id="section-1">如何持续技术学习 – 玉伯</h2>
+<p>一个乍看没什么技术含量的标题和乍听之下不怎么滴的口才，却是我当时很关注的一个分享。所以也来说说<br />
+如何持续技术学习难道不是每个技术最应该关心的话题吗?</p>
+
+<h4 id="section-2">时间管理 情绪管理</h4>
+<p>“其实我们并不需要时间管理 需要的是<strong>情绪管理</strong>与<strong>适量自律</strong>”  
+我本身是一个很情绪化的人，所以我很同意情绪不但会影响我的效率，也会影响我的学习积极性。<br />
+保持一个愉快的心情去学习去工作远比，什么年度计划表有意义的多。<br />
+适当地自律远比用什么番茄工作法来强迫自己来遵守时间来的有效。
+毕竟学习不是用逼就能学好的。</p>
+
+<h4 id="section-3">知识管理</h4>
+<ol>
+  <li>“投入在 Input 上的时间越多，知识管理越差”</li>
+  <li>“最好的阅读是产出。”</li>
+</ol>
+
+<p>这个简直不能同意更多，其实很多时候我们mark了很多技术文章，其中派上用场的却寥寥无几，<br />
+更多的是mark下来的时候那爽快感，就好像mark了，看了一遍，就学会了一样，殊不知还没等到睡觉你已经全忘光了。
+最好的学还是去用，去产出。被动的接受知识远没有抱着疑问去寻求答案来的有效率。</p>
+
+<h4 id="section-4">梦想</h4>
+<p>梦想不是空头支票，需要你投入相当的时间和知识，再加上一个平和的情绪去实现它，要做一个有追求的程序员。</p>
+
+<h2 id="section-5">总体感受</h2>
+<p>国内倾向于分享实际应用中的产物，比如异步库then。js，淘宝前后端分离实践，BlendUI等。<br />
+而国外的分享感觉更加天马行空一些，比如James Halliday的所有分享trumpets，browserify， Jacob GroundWater的NodeOS等。<br />
+有很多其他分享也不错，时间不多这里就不一一回顾了。
+顺便感慨下，James Halliday大神的手速真是吊的一b，光凭他能一边演讲一边以打字聊天般的手速写演示代码就足够让我五体投地了。<br />
+晚上回旅馆follow了他的github，看到那满满的几乎没有断过的提交后更是哭晕在厕所。<br />
+未来应该更多地参与开源的项目，学好英语，有益于别人，更有益于自己进步。</p>
+
+  </div>
+  <hr />
+  
+
+  <!-- 分页页码展示 -->
+  <div id="post-pagination" class="pagination pagination-centered">
+    <ul>
+      <!-- 上一页按钮 -->
+      
+      <li class="disabled">
+      <span><i class="icon-chevron-left"></i></span>
+      </li>
+      
+
+      <!-- 第一页,访问根目录 -->
+      
+      <li class="active">
+      <a href="#">1</a>
+      </li>
+      
+
+      
+
+      
+      <li class="disabled">
+      <a href="#"><i class="icon-chevron-right"></i></a>
+      </li>
+      
+    </ul>
+  </div>
+
+  </div>
+  <div class="span2">
+  </div>
+</div>
+
+
+      
+    
+
+  </body>
+</html>
+

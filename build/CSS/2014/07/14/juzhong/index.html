@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS水平垂直居中的几种方式和适用情况</title>
+    
+    
+    <meta name="author" content="shiqianmiao">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/typo.css" rel="stylesheet">
+    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/solarized.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/datatables-bootstrap.css" rel="stylesheet">
+    <link href="/css/codepiano.css" rel="stylesheet">
+
+    <!-- javascript files -->
+    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/datatables-bootstrap.js"></script>
+    <script type="text/javascript" src="/js/codepiano.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <script type="text/javascript">
+    </script>
+
+  </head>
+
+  <body id="scroll-pane" data-spy="scroll" data-target="#time-list-nav">
+    <div class="wrapper">
+      <!-- 导航条 -->
+      <div class="navbar">
+        <div class="navbar-inner row-fluid">
+          <div class="span2">
+          </div>
+          <div class="span8">
+            <a class="brand" href="/">
+              <span class="site-author"> shiqianmiao </span>
+              <span class="site-title"> (╯‵□′)╯︵┻━┻ </span>
+            </a>
+            <ul class="nav">
+              
+              
+              
+
+
+
+
+
+<li class="posts"><a href="/posts.html">文章</a></li>
+<li class="timeline"><a href="/timeline.html">时间轴</a></li>
+<li class="categories"><a href="/categories.html">分类</a></li>
+<li class="about"><a href="/about.html">关于</a></li>
+
+            </ul>
+          </div>
+          <div class="span2">
+          </div>
+        </div>
+      </div>
+
+      <!-- 正文 -->
+      
+
+<div class="row-fluid post-full typo">
+  <div class="span2"></div>
+  <div class="span8 typo">
+    <h2>CSS水平垂直居中的几种方式和适用情况 </h2>
+    <div class="post_info">
+      
+      <ul class="tag_box inline">
+        <li><i class="icon-calendar"></i></li>
+        <li> 2014 年 07 月 14 日</li>
+        <li><i class="icon-folder-open"></i></li>
+        
+        
+ 
+  <li>
+    <a href="/categories.html#CSS-ref">
+      CSS 
+    </a>
+  </li>
+  
+
+
+
+      </ul>
+        
+    </div>
+    <div class="content">
+      
+<p>最近和我们公司负责切图工作的同事那边要了一些psd来学习切图。好久没有做过关于CSS方面的工作，写起来憋手蹩脚的。<br />
+最近打算研究一些CSS相关的东西来练练手，免得到要用的时候才发现自己已经忘得差不多了。</p>
+
+<p>在制作Web页面时大家或多或少都有碰到CSS制作水平垂直居中的问题，特别的其中的垂直居中，更是让人烦恼。<br />
+用CSS来实现元素的垂直居中效果是件苦差事，这里我总结了一下几种不同实现的方法和他们的优缺点和适用场景。  </p>
+
+<h3 id="section">垂直居中</h3>
+
+<h4 id="section-1">方法一：</h4>
+<p>这种方法适合只有单行内容的情况。只要<strong>保证元素内容是单行。并且高度是不变的。将height和line-height的值设置成一样</strong>就可以了。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/pusib/1/embed">JS Bin</a></p>
+
+<h5 id="section-2">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作，没有足够空间时，内容不会被切掉（没有足够空间就不属于单行了）。</li>
+  <li>对运用在小元素上是非常有用，比如说让图片或者单行文本字段垂直居中。</li>
+</ol>
+
+<h5 id="section-3">优点</h5>
+<ol>
+  <li>实现简单。</li>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-4">缺点</h5>
+<p>只能在单行时适用，多行时效果很差。</p>
+
+<h3 id="section-5">方法二：</h3>
+<p>这种方法要实现垂直居中首先要满足有一个<strong>固定的高度</strong>，并且<strong>父容器需要设置相对定位</strong>（position: relative）。<br />
+给需要垂直居中的容器设置<strong>绝对定位</strong>（position:absolute,并且<strong>定位高度</strong>（top:50%）和<strong>margin-top为负的高度的一半</strong>（margin-top:-height/2）。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/dapaz/11/embed">JS Bin</a></p>
+
+<h5 id="section-6">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-7">优点</h5>
+<ol>
+  <li>不需增加额外的标签。</li>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-8">缺点</h5>
+<ol>
+  <li>只能支持固定高度的情况。</li>
+  <li>需要父标签配合设置相对定位。</li>
+  <li>固定高度导致内容溢出时会出现滚动条或隐藏，不会配合内容高度变化。</li>
+</ol>
+
+<h3 id="section-9">方法三：</h3>
+<p>这种方法是通过让div去模拟表格的效果，从而通过<strong>使用table-cell的vertical-align属性</strong>来实现垂直居中。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/jagak/5/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-10">适用场景</h5>
+<ol>
+  <li>不兼容ie6，ie7</li>
+</ol>
+
+<h5 id="section-11">优点</h5>
+<ol>
+  <li>可以自适应高度，不会出现滚动条。</li>
+  <li>高度不足不会被切断。</li>
+</ol>
+
+<h5 id="section-12">缺点</h5>
+<ol>
+  <li>兼容问题，不兼容ie6，ie7。display: table 在ie6，ie7下无效（不能强行装table了，好忧伤）</li>
+</ol>
+
+<script src="http://static.jsbin.com/js/embed.js"></script>
+
+<h5 id="section-13">怎么做兼容？</h5>
+<p>要兼容蛋疼的ie6，ie7，需要在原本的table-cell里面再套一层div，并且针对ie6，ie7使用hack。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/sovuyu/3/embed?html,css,output">JS Bin</a></p>
+
+<p>ie6下的效果图：<br />
+<img src="/image/juzhong/ie6-table-cell.png" alt="ie6下的效果图" /></p>
+
+<h3 id="section-14">方法四：</h3>
+<p>这种方法是通过<strong>在居中元素前放置一个空的块元素，设置块元素的高度为50%，margin-bottom为居中元素负的高度的一半，居中元素清除浮动</strong>来实现的。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/rated/5/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-15">适用场景</h5>
+<ol>
+  <li>能在所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-16">优点</h5>
+<ol>
+  <li>在没有足够空间的情况下不会被自动切割。</li>
+  <li>比上一个模拟table实现起来更简单。</li>
+</ol>
+
+<h5 id="section-17">缺点</h5>
+<ol>
+  <li>元素高度固定。</li>
+  <li>元素溢出时只能在父元素上设置overflow属性，出现滚动条或切割。</li>
+  <li>增加了一个多余的块元素，为了保证ie6，ie7下的兼容性，div必须是有内容的块元素，这里用了&amp;nbsp;填充。</li>
+</ol>
+
+<p>ie6下的效果图：<br />
+<img src="/image/juzhong/ie6-extra-div.png" alt="ie6下的效果图" /></p>
+
+<h3 id="section-18">方法五</h3>
+<p>当我们只需要一个简单的多行文本垂直居中而且父容器的高度没有要求时，可以很简单的用<strong>设置上下相同的padding值</strong>来做到。</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/qisoj/2/embed?html,css,output">JS Bin</a></p>
+
+<h5 id="section-19">适用场景</h5>
+<ol>
+  <li>能再所有浏览器下工作。</li>
+</ol>
+
+<h5 id="section-20">优点</h5>
+<ol>
+  <li>结构简单。</li>
+</ol>
+
+<h5 id="section-21">缺点</h5>
+<ol>
+  <li>父容器不能有固定高度。</li>
+</ol>
+
+<p>上面讲了5种不同的垂直水平居中的方法，其实还有非常多的实现方法，这里就不一一总结了，我们还是在这展望一下未来我们所希望的垂直居中的方法吧。<br />
+现在所使用的垂直水平居中的方法，绝大部分都是通过各种奇妙的写法来达到效果的，我们想要的是更简单的写法。比如：</p>
+
+<pre><code>position：center;
+</code></pre>
+
+<p>希望css未来的发展能够满足大家这个迫切的需求，不用再在各种各样的垂直居中方案中纠结了。(╯‵□′)╯︵┻━┻  </p>
+
+<p>有兴趣继续了解的可以去<a href="http://www.w3cplus.com/">w3cplus</a>看看，上面有更多更加完善、碉堡的总结。  </p>
+
+    </div>
+
+    
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+   
+    <li><a href="/posts.html#CSS">CSS <span>1</span></a></li>
+  
+
+
+
+    </ul>
+      
+
+    <hr>
+    <div class="pagination pull-right">
+      <ul>
+        
+        <li class="prev"><a href="/JavaScript/2014/06/26/js_conf" title="6.21-6.22杭JSConf">&larr; 上一篇</a></li>
+        
+        <li><a href="/posts.html">全部</a></li>
+        
+        <li class="next"><a href="/JavaScript/2014/07/16/ios_safari_private_mode" title="IOS下使用Storage时的一个坑">下一篇 &rarr;</a></li>
+        
+      </ul>
+    </div>
+    <br />
+    <div id="comment-hook"></div>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'shiqianmiao'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementById('comment-hook') || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+  </div>
+  <div class="span2"></div>
+</div>
+
+
+      
+    
+
+  </body>
+</html>
+

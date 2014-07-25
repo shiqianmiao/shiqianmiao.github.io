@@ -9,10 +9,10 @@ markdown: kramdown
 title : (╯‵□′)╯︵┻━┻
 tagline: 热爱技术,热爱开源
 author :
-  name : kandamashiro
+  name : shiqianmiao 
   description: JavaScript & PHP Developer
-  email : fdcsd6616@gmail.com
-  github : https://github.com/kandamashiro
+  email : 1205924828@qq.com
+  github : https://github.com/shiqianmiao
   simple_search: http://google.com/search
 
 # The production_url is only used when full-domain names are needed
@@ -80,7 +80,7 @@ codepiano :
   comments :
     provider : disqus
     disqus :
-      short_name : kandamashiro
+      short_name : shiqianmiao
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
